@@ -1,0 +1,19 @@
+{
+  "path":"../test/sample_book",
+  "dev":0,
+  "mode":"playground-mode",
+  "theme":"default",
+  "book-size":{
+    "1024":{
+      "width":1012,
+      "height":768
+    }
+  },
+  "speed":500,
+  "page-size":{
+    "1024":{
+      "width":848,
+      "height":672
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>e-TextBook(s)</title>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="apple-touch-startup-image" href="/startup.png">
+
+    <link rel="stylesheet" href="app/themes/flat/css/main.css"/>
+</head>
+
+<body class="init">
+<div id="startup">
+    <div class="left-page"></div>
+    <div class="right-page">
+        <p class="book-title">{{Book Title}}</p>
+        <!--<img src="{{src}}" id="cover"/>-->
+    </div>
+</div>
+<div id="reader-stage">
+    <div id="book-stage"></div>
+    <div id="book-mask"></div>
+    <div id="book-mask-toc"></div>
+</div>
+<div id="reader-mask"></div>
+<!--END  book cover END-->
+<script src="app/lib/requirejs/require.js" data-main="app/main"></script>
+</body>
+
+</html>

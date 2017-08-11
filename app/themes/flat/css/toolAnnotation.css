@@ -1,0 +1,507 @@
+#toolAnnotation.active {
+  -webkit-transform:translate3d(-1024px,0,0);
+}
+#toolAnnotation {
+  position:absolute;
+  width: 1024px;
+	top: 66px;
+	right: -1024px;
+  	z-index:9999;
+-webkit-transform: translateX(-1024px,0,0);
+-webkit-transition: -webkit-transform 300ms ease-in-out;
+}
+.annotation{
+	list-style-type: none;
+	padding:0;
+	margin:0;
+	
+}
+.annotation > li{
+	float: left;
+}
+.annotation > li:last-child{
+	width:60px;
+	position: relative;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after{
+ clear: both;
+}
+#toolAnnotation .tools {
+  list-style-type: none;
+  background-color:#ededed;
+  margin:0;
+  padding-left:0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+#toolAnnotation .tools li{
+ margin:0;
+ padding:10px;
+}
+
+.all{
+	position:absolute;
+	z-index: 106;
+	right:0;
+	top:0;
+	-webkit-transform: translateX(60px,0,0);
+	-webkit-transition: -webkit-transform 300ms ease-in-out;
+}
+.all.hide{
+	-webkit-transform:translate3d(60px,0,0);
+}
+.sub1,.sub2,.sub3,.sub4,.sub5{
+	position:absolute;
+	right:-60px;
+	top:0;
+	width:60px;
+	-webkit-transform: translateX(-60px,0,0);
+	-webkit-transition: -webkit-transform 300ms ease-in-out;
+}
+.sub1{
+	z-index: 101;
+}
+.sub2{
+	z-index: 102;
+}
+.sub3{
+	z-index: 103;
+}
+.sub4{
+	z-index: 104;
+}
+.sub5{
+	z-index: 105;
+}
+.sub1.active,.sub2.active,.sub3.active,.sub4.active,.sub5.active{
+	-webkit-transform:translate3d(-60px,0,0);
+}
+.tools button{
+  width:40;
+  height:40;
+}
+.tools button{
+	margin-bottom:17px;
+}
+.tools button:last-child {
+	margin-bottom:0;
+}
+
+.arrow:hover,.arrow:active,
+.text:hover,.text:active,
+.rectangles:hover,.rectangles:active,
+.pens:hover,.pens:active,
+.marks:hover,.marks:active,
+.colors:hover,.colors:active,
+.widths:hover,.widths:active,
+.rectangle:hover,.rectangle:active,
+.roundrect:hover,.roundrect:active,
+.ellipse:hover,.ellipse:active,
+.line:hover,.line:active,
+.pen:hover,.pen:active,
+.mark:hover,.mark:active,
+.lineWidth2:hover,.lineWidth2:active,
+.lineWidth5:hover,.lineWidth5:active,
+.lineWidth10:hover,.lineWidth10:active,
+.lineWidth15:hover,.lineWidth15:active,
+.lineWidth20:hover,.lineWidth20:active,
+.pink:hover,.pink:active,
+.red:hover,.red:active,
+.orange:hover,.orange:active,
+.yellow:hover,.yellow:active,
+.green:hover,.green:active,
+.blue:hover,.blue:active,
+.black:hover,.black:active,
+.white:hover,.white:active,
+.complex:hover,.complex:active
+{
+	background-color:#d8d8d8;
+}
+.arrow{
+  background:url(../images/toolAnnotation/main-arrow.png);
+}
+.arrow.current{
+	background: #555555 url(../images/toolAnnotation/main-arrow-sel.png);
+}
+.text {
+  background:url(../images/toolAnnotation/main-text.png);
+}
+.text.current{
+	background: #555555 url(../images/toolAnnotation/main-text-sel.png);
+}
+.rectangles {
+  background:url(../images/toolAnnotation/main-rectangles.png);
+}
+.rectangles.current {
+  background:#555 url(../images/toolAnnotation/main-rectangles-sel.png);
+}
+.pens {
+  background:url(../images/toolAnnotation/main-pens.png);
+}
+.pens.current {
+  background:#555 url(../images/toolAnnotation/main-pens-sel.png);
+}
+.marks {
+  background:url(../images/toolAnnotation/main-marks.png);
+}
+.marks.current {
+  background:#555 url(../images/toolAnnotation/main-marks-sel.png);
+}
+.colors {
+  background:url(../images/toolAnnotation/main-colors.png);
+}
+.colors.current {
+  background:#555 url(../images/toolAnnotation/main-colors-sel.png);
+}
+.widths {
+	background:url(../images/toolAnnotation/main-widths.png);
+}
+.widths.current {
+	background:#555 url(../images/toolAnnotation/main-widths-sel.png);
+}
+/*sub1*/
+.rectangle {
+	background:url(../images/toolAnnotation/rectangle.png);
+}
+.rectangle.current {
+	background:#555555 url(../images/toolAnnotation/rectangle-sel.png);
+}
+#all button.rectangle{
+	background-image:url(../images/toolAnnotation/rectangle.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.rectangle.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/rectangle-sel.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.roundrect {
+	background:url(../images/toolAnnotation/rounded.png);
+}
+.roundrect.current {
+	background:#555 url(../images/toolAnnotation/rounded-sel.png);
+}
+#all button.roundrect{
+	background-image:url(../images/toolAnnotation/rounded.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.roundrect.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/rounded-sel.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.ellipse {
+	background:url(../images/toolAnnotation/oval.png);
+}
+.ellipse.current {
+	background:#555 url(../images/toolAnnotation/oval-sel.png);
+}
+#all button.ellipse{
+	background-image:url(../images/toolAnnotation/oval.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.ellipse.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/oval-sel.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.line {
+	background:url(../images/toolAnnotation/line.png);
+}
+.line.current {
+	background:#555url(../images/toolAnnotation/line-sel.png);
+}
+#all button.line{
+	background-image:url(../images/toolAnnotation/line.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.line.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/line-sel.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+/*sub2*/
+.pen {
+	background:url(../images/toolAnnotation/pen.png);
+}
+.pen.current {
+	background:#555 url(../images/toolAnnotation/pen-sel.png);
+}
+#all button.pen{
+	background-image:url(../images/toolAnnotation/pen.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.pen.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/pen-sel.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.mark {
+	background:url(../images/toolAnnotation/mark.png);
+}
+.mark.current {
+	background:#555 url(../images/toolAnnotation/mark-sel.png);
+}
+#all button.mark{
+	background-image:url(../images/toolAnnotation/mark.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.mark.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/mark-sel.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+/*sub3*/
+/*sub4*/
+.pink {
+	background:url(../images/toolAnnotation/pink.png);
+}
+#all button.pink{
+	background-image:url(../images/toolAnnotation/pink.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.pink.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/pink.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.red {
+	background:url(../images/toolAnnotation/red.png);
+}
+#all button.red{
+	background-image:url(../images/toolAnnotation/red.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.red.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/red.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.orange {
+	background:url(../images/toolAnnotation/orange.png);
+}
+#all button.orange{
+	background-image:url(../images/toolAnnotation/orange.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.orange.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/orange.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.yellow {
+	background:url(../images/toolAnnotation/yellow.png);
+}
+#all button.yellow{
+	background-image:url(../images/toolAnnotation/yellow.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.yellow.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/yellow.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.green {
+	background:url(../images/toolAnnotation/green.png);
+}
+#all button.green{
+	background-image:url(../images/toolAnnotation/green.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.green.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/green.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.blue {
+	background:url(../images/toolAnnotation/blue.png);
+}
+#all button.blue{
+	background-image:url(../images/toolAnnotation/blue.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.blue.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/blue.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.black {
+	background:url(../images/toolAnnotation/black.png);
+}
+#all button.black{
+	background-image:url(../images/toolAnnotation/black.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.black.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/black.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.white {
+	background:url(../images/toolAnnotation/white.png);
+}
+#all button.white{
+	background-image:url(../images/toolAnnotation/white.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.white.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/white.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.complex {
+	background:url(../images/toolAnnotation/complex.png);
+}
+#all button.complex{
+	background-image:url(../images/toolAnnotation/complex.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.complex.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/complex.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.pink.current,.red.current,.orange.current,
+.yellow.current,.green.current,.blue.current,
+.black.current,.white.current,.complex.current {
+	background-color:#555;
+}
+/*sub5*/
+.lineWidth2 {
+	background:url(../images/toolAnnotation/lineWidth2.png);
+}
+.lineWidth2.current {
+	background:#555 url(../images/toolAnnotation/lineWidth2-sel.png);
+}
+#all button.lineWidth2{
+	background-image:url(../images/toolAnnotation/lineWidth2.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.lineWidth2.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/lineWidth2-sel.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.lineWidth5 {
+	background:url(../images/toolAnnotation/lineWidth5.png);
+}
+.lineWidth5.current {
+	background:#555 url(../images/toolAnnotation/lineWidth5-sel.png);
+}
+#all button.lineWidth5{
+	background-image:url(../images/toolAnnotation/lineWidth5.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.lineWidth5.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/lineWidth5-sel.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.lineWidth10 {
+	background:url(../images/toolAnnotation/lineWidth10.png);
+}
+.lineWidth10.current {
+	background:#555 url(../images/toolAnnotation/lineWidth10-sel.png);
+}
+#all button.lineWidth10{
+	background-image:url(../images/toolAnnotation/lineWidth10.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.lineWidth10.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/lineWidth10-sel.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.lineWidth15 {
+	background:url(../images/toolAnnotation/lineWidth15.png);
+}
+.lineWidth15.current {
+	background:#555 url(../images/toolAnnotation/lineWidth15-sel.png);
+}
+#all button.lineWidth15{
+	background-image:url(../images/toolAnnotation/lineWidth15.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.lineWidth15.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/lineWidth15-sel.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+.lineWidth20 {
+	background:url(../images/toolAnnotation/lineWidth20.png);
+}
+.lineWidth20.current {
+	background:#555 url(../images/toolAnnotation/lineWidth20-sel.png);
+}
+#all button.lineWidth20{
+	background-image:url(../images/toolAnnotation/lineWidth20.png), url(../images/toolAnnotation/triangle.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#all button.lineWidth20.select {
+	background-color:#555;
+	background-image:url(../images/toolAnnotation/lineWidth20-sel.png), url(../images/toolAnnotation/triangle-sel.png);
+	background-repeat: no-repeat;
+	background-position:center, 31px 31px;
+}
+#toolAnnotation input,#toolAnnotation button{
+	border-radius: 2px;
+	border:0;
+  	cursor: pointer;
+}
+#toolAnnotation input:focus,#toolAnnotation button:focus{
+    outline: 0;
+}
+#toolAnnotation .canvas {
+  margin:0px auto;
+  margin-top:2;
+}
+#toolAnnotation .input-text, #toolAnnotation .stamps-text {
+  display:none;
+  padding:0;
+  margin:0;
+}

@@ -1,0 +1,22 @@
+{
+  "path":"../test/sample_book",
+  "dev":1,
+  "mode":"playground-mode",
+  "theme":"default",
+  "opsync":true,
+  "socket":"ws://localhost:3030/",
+  "system_plugin":["book","bookMask","toc","navigator","toolbar","toolAnnotation","assistant"],
+  "book-size":{
+    "1024":{
+      "width":1012,
+      "height":768
+    }
+  },
+  "speed":300,
+  "page-size":{
+    "1024":{
+      "width":848,
+      "height":672
+    }
+  }
+}

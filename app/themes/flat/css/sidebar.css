@@ -1,0 +1,150 @@
+#sidebar {
+	width: 256px;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #404040;
+	color: white;
+	z-index: 9999;
+}
+
+#sidebar > .header {
+	padding: 10px;
+}
+
+#sidebar > .header > .title-icon {
+	width: 20px;
+	height: 24px;
+	display: inline-block;
+	background: url(../images/icon-group.png);
+	background-position: 0 0;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+
+#sidebar > .header > .settings {
+	width: 21px;
+	height: 21px;
+	display: inline-block;
+	float: right;
+	background: url(../images/icon-group.png);
+	background-position: -20px 0;
+	vertical-align: middle;
+}
+
+#sidebar ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	-webkit-margin-before: 0;
+	-webkit-margin-after: 0;
+}
+
+#sidebar ul.folded {
+	display: none;
+}
+
+#sidebar .folder {
+	display: block;
+	height: 40px;
+	line-height: 40px;
+}
+
+#sidebar .folder .btn {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-image: url(../images/sidebar/bullet_arrow_down.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	vertical-align: middle;
+}
+
+#sidebar .folder.folded .btn {
+	background-image: url(../images/sidebar/bullet_arrow_right.png);
+}
+
+#sidebar #sidebar-scroll-wrapper {
+	height: -webkit-calc(100% - 41px);
+	cursor: pointer;
+}
+
+#sidebar .outline-module > .folder {
+	padding-left: 20px;
+}
+
+#sidebar .outline-unit > .folder {
+	padding-left: 40px;
+}
+
+#sidebar .outline-page {
+	padding-left: 60px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#sidebar .outline .folder, #sidebar .outline .outline-page {
+	opacity: 0.5;
+}
+
+#sidebar .outline .current {
+	opacity: 1;
+	border-left: 5px solid #4E8990;
+	background-color: #2A2824;
+}
+
+#sidebar .outline .folder:hover, #sidebar .outline .outline-page:hover {
+	background-color: #2A2824;
+}
+
+#sidebar .outline-module > .folder.current {
+	padding-left: 15px;
+}
+
+#sidebar .outline-unit > .folder.current {
+	padding-left: 35px;
+}
+
+#sidebar .outline-page.current {
+	padding-left: 55px;
+}
+
+#sidebar .outline {
+	color: #eee;
+	background-color: #323232;
+}
+
+@media screen and (max-width:1279px) {
+	#sidebar {	
+	  -webkit-transform:translate3d(-256px,0,0);
+	  -webkit-transition:-webkit-transform 300ms ease-out;
+	}
+
+	#sidebar.active {	
+	  -webkit-transform:translate3d(0,0,0);
+	}
+}
+
+@media screen and (width: 1366px) {
+	#sidebar {
+		width: 342px;
+	}
+}
+
+#sidebar .bookmark {
+	background-color: #323232;
+	opacity: 0.5;
+	padding-bottom: 10px;
+}
+
+#sidebar .bookmark > li {
+	padding-left: 60px;
+	height: 40px;
+	line-height: 40px;
+}
+
+#sidebar .bookmark > li:hover {
+	background-color: #2A2824;
+}

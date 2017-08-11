@@ -1,0 +1,115 @@
+/* Content Flip Style */
+.bb-bookblock{
+  width:100%;
+  height:100%;
+  position: relative;
+  -webkit-perspective:1300;
+}
+
+#book{
+  z-index:10;
+  overflow: hidden;
+}
+
+.page > div {
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+#book-stage .left-page,#book-stage .right-page{
+  width:100%;
+  -webkit-backface-visibility: hidden;
+}
+.page .right-page{
+  overflow: auto;
+}
+
+#book-stage .right-page{
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  box-sizing:border-box;
+  position: absolute;
+  opacity:1;
+  top: 0;
+  background-color: white;
+  left: 100%;
+  pointer-events:none;
+  -webkit-transition: left 200ms ease-in-out;
+}
+
+.page.turned {
+  left: -100%;
+  -webkit-transition: left 200ms ease-in-out;
+}
+
+.page.active {
+  left: 0;
+  -webkit-transition: left 200ms ease-in-out;
+}
+
+.page.notransition {
+  -webkit-transition: none;
+}
+
+.page.animation{
+  z-index:6;
+}
+
+.page.animation-next-end {
+  -webkit-animation: slide-backwards-end cubic-bezier(0.215, 0.610, 0.355, 1.000) 400ms 1;
+}
+
+.page.animation-prev-end {
+  -webkit-animation: slide-forwards-end cubic-bezier(0.215, 0.610, 0.355, 1.000) 400ms 1;
+}
+
+.page.show{
+  pointer-events:auto;
+  opacity:1;
+}
+
+.left-bottom-button,
+.right-top-button,
+.right-bottom-button{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 20;
+  cursor: pointer;
+}
+.left-bottom-button{
+  left: 0;
+  bottom: 0;
+}
+.right-top-button{
+  right: 0;
+  top: 0;
+}
+
+.right-bottom-button{
+  right: 0;
+  bottom: 0;
+}
+
+@-webkit-keyframes slide-forwards-end {
+    0% {
+      left: 15%;
+    }
+    100% {
+      left: 0;
+    }
+}
+
+@-webkit-keyframes slide-backwards-end {
+    0% {
+      left: -15%;
+    }
+    100% {
+      left: 0;
+    }
+}
